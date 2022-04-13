@@ -3,19 +3,20 @@
 @import "./reset.scss";
 
 //Colors
-$teal-green-dark: #075e54;
-$teal-green-light: #128c7e;
+$teal-blue-dark: #16BAC5;
+$teal-blue-light: #128c7e;
 $light-green: #25d366;
 
 body {
   margin: 0;
-  box-sizing: border-box;
+  box-sizing:border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $teal-blue-dark;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Helvetica", Arial, Helvetica, sans-serif;
   font-size: 40px;
 }
 
@@ -23,27 +24,26 @@ label,
 button,
 p,
 li,
-ol,
+h2,
 input,
 textarea {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
 p, textarea, input{
   font-size: 14px;
 }
 
-ol {
-  list-style: inside decimal;
-  padding-left: 0;
-}
 
-main.page-home {
-  min-height: 100vh;
+
+main {
+ 
 
   @media screen and (min-width: 1024px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 120px;
   }
 }
 
@@ -51,13 +51,13 @@ main.page-home {
 .generate-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .initial {
-  background-color: $teal-green-dark;
+  background-color: $teal-blue-dark;
   color: #fff;
-  padding: 0 32px;
+  padding:0 50px 0 50px;
 
   @media screen and (max-width: 1024px) {
     min-height: 100vh;
@@ -66,11 +66,11 @@ main.page-home {
 
 .generate-link {
   @media screen and (max-width: 1024px) {
-    padding: 64px 0;
+    padding: 0;
   }
 }
 
-.page-name ol li {
+.page-name h2 li {
   margin-top: 16px;
 }
 
@@ -81,9 +81,10 @@ main.page-home {
 .form-container {
   max-width: 450px;
   width: 100%;
-  height: 480px;
-  padding: 60px 40px;
+  height: 400px;
+  padding: 40px 40px;
   box-sizing: border-box;
+  background-color: #fff;
 
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -101,12 +102,12 @@ main.page-home {
 }
 
 .generate-link-form {
-  display: none;
+  display: grid;
 }
 
 label {
   font-weight: 600;
-  display: block;
+  display: inline-flex;
   margin-bottom: 16px;
 }
 
@@ -160,18 +161,17 @@ button.btn {
   width: 100%;
   padding: 12px 16px;
   height: 50px;
-  background-color: $teal-green-light;
+  background-color: $teal-blue-light;
   outline: none;
   border-radius: 10px;
   position: relative;
-
   font-weight: 600;
   font-size: 16px;
   color: #fff;
 }
 
 .icon-button {
-  background-color: $teal-green-dark;
+  background-color: $teal-blue-dark;
   position: absolute;
   left: 0;
   top: 0;
@@ -188,4 +188,30 @@ button.btn-copy{
   background-color: transparent;
   outline: none;
   color: $light-green;
+}
+
+button.btn {
+  width: 100%;
+  padding: 12px 16px;
+  height: 50px;
+  background-color: $teal-blue-light;
+  outline: none;
+  border-radius: 10px;
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+
+}button.btn-material {
+  width: 40%;
+  padding: 12px 16px;
+  height: 50px;
+  background-color: orange;
+  outline: none;
+  border-radius: 10px;
+  position: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin: 15px 0;
 }
